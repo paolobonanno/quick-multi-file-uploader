@@ -70,8 +70,7 @@
                         for (var dataKey in customData) {
                             data.append(dataKey, customData[dataKey]);
                         }
-                        console.log("ajax");
-                        console.log($.extend({}, options, { data: data }));
+
                         $.ajax($.extend({}, options, { data: data }))
                             .always(function () {
                                 afterUpload();
@@ -96,13 +95,13 @@
                 }
             }
         };
-
-
+        
         $.quickMultiFileUploader.defaults = {
+            uploadOnChange: false,
             method: "post",
+            cache: false,
             processData: false,
-            contentType: false,
-            uploadOnChange: false
+            contentType: false
         };
 
         $(document).ready(function () {
