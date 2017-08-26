@@ -164,7 +164,7 @@ You can set:
 </script>
 ```
 ## Full examples
-
+### Client side
 * Auto upload files to server.
   ```html
   <input name="files" class="quickMultiFileUploader" type="file" multiple data-url="/server/UploadFile" />
@@ -199,5 +199,19 @@ You can set:
       }
   </script>
   ```
+### Server side
+#### Asp.NET MVC
+/Controllers/HomeController.cs:
+```csharp
+[HttpPost]
+public ActionResult UploadFile()
+{
+	foreach (string fileName in Request.Files)
+	{
+		HttpPostedFileBase file = Request.Files[fileName];
+		//ToDo
+	}
 
-
+	return //
+}
+```
