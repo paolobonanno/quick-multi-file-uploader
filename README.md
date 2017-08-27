@@ -50,7 +50,7 @@ or set the *onChangeUpload* option in javascript initialize:
         });
 </script>
 ```
-#### Periodically
+#### Programmatically
 You can start upload by calling plugin as in this example:
 ```javascript
 function startUploadFiles(){
